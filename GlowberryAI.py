@@ -2,7 +2,7 @@ from openai import OpenAI
 import linecache 
 
 client = OpenAI(
-    api_key="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"    
+    api_key="_YOUR_VERY_SECRET_API_KEY_"    
 )
 
 prompt = "What are the top 40 non-fiction books that we study?"
@@ -24,7 +24,7 @@ f = open("1.txt", "w")
 f.write(response)
 
 
-text_count = "B"
+text_count = "X"
 counter = 1
 
 for i in range(1,25):
@@ -57,7 +57,7 @@ for i in range(1,25):
         model="gpt-3.5-turbo"
     )
 
-    text_count = (text_count,'A')
+    text_count = (text_count,'X')
     print(chat_completion.choices[0].message.content)
     response_essay = chat_completion.choices[0].message.content
     counter = counter+1
